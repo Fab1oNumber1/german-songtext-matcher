@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="./vite.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+  <script type="module" crossorigin src="./assets/index.fa32644e.js"></script>
+  <link rel="stylesheet" href="./assets/index.f3cb6fc8.css">
+</head>
+<body>
+<div class="container mt-3">
+
+    <h1 class="text-center">Deutsche Musik Lyrics Matcher</h1>
+    <p>Wolltest du schon immer wissen, welche Worte Farid Bang und Helene Fischer gemeinsam nutzen? Oder ob auch ein Kollegah ein Le-le-le-le von den Lippen lässt?
+        <br>
+        Dann hast du hier nun die Möglichkeit die Songtexte deiner Lieblingslyriker zu vergleichen!
+    </p>
+    <div class="alert alert-info">
+        Folgend kannst du rechts deine Lieblingskünstler auswählen. In den Kreisen unten siehst du welche Begriffe die Künstler gemeinsam verwenden.<br>
+        In den Kreisen steht ebenfalls, wie oft der entsprechende Begriff in den Songtexten vorgekommen ist.<br>
+        Anhand der Färbung erkennst du die Gewichtung des Begriffs zum entsprechenden Künstler. <br>
+        Grün -> Fast nur vom grünen Künstler verwendet.<br>
+        Türkis -> Vom Grünen wie auch Blauen Künstler ähnlich oft verwendet.
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <div class="card">
+                <div class="card-body">
+
+                    <div id="app"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Einstellungen</h3>
+                    <label class="form-label">Künstler wählen</label>
+                    <div class="form-group d-flex mb-3">
+                        <div style="width: 5ch; background: #F00"></div>
+                        <select id="selectR" class="form-select artist-select" data-selected-artists-id="0">
+
+                        </select>
+                    </div>
+                    <div class="form-group d-flex mb-3">
+                        <div style="width: 5ch; background: #0F0"></div>
+                        <select id="selectG" class="form-select artist-select" data-selected-artists-id="1">
+
+                        </select>
+                    </div>
+                    <div class="form-group d-flex mb-3">
+                        <div style="width: 5ch; background: #00F"></div>
+                        <select id="selectB" class="form-select artist-select" data-selected-artists-id="2">
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Wort minimum anzahl Buchstaben</label>
+                        <input type="number" class="form-control" id="wordMinLenInput" min="4">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Wort mindestens mal gefunden</label>
+                        <input type="number" class="form-control" id="countLimitInput">
+                    </div>
+                    <div class="form-group">
+                        <label>Limit</label>
+                        <input type="number" class="form-control" id="limitInput">
+                    </div>
+                    <div class="form-group">
+                        <label>Mindest übereinstimmung</label>
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="minMatch" min="0" max="40">
+                            <span class="input-group-text">%</span>
+                        </div>
+                        <small><i>Auf 0 Stellen damit Wörter erscheinen, die nur von einem Künstler verwendet werden</i></small>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
