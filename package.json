@@ -1,0 +1,25 @@
+{
+  "name": "german-rap-map",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "watch-data": "cd data && nodemon -e mjs  calc_word_usage.mjs"
+  },
+  "devDependencies": {
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.1",
+    "d3": "^7.6.1",
+    "jquery": "^3.6.1",
+    "minimist": "^1.2.6",
+    "node-fetch": "^3.2.10",
+    "node-html-parser": "^6.1.1",
+    "nodemon": "^2.0.20",
+    "sass": "^1.55.0"
+  }
+}
